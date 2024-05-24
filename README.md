@@ -1,7 +1,5 @@
-# @uniswap/token-lists (beta)
+# SwifyDex-token-lists
 
-[![Tests](https://github.com/Uniswap/token-lists/workflows/Tests/badge.svg)](https://github.com/Uniswap/token-lists/actions?query=workflow%3ATests)
-[![npm](https://img.shields.io/npm/v/@uniswap/token-lists)](https://unpkg.com/@uniswap/token-lists@latest/)
 
 This package includes a JSON schema for token lists, and TypeScript utilities for working with token lists.
 
@@ -30,7 +28,7 @@ for ease of use.
 
 ```typescript
 
-import { schema } from '@uniswap/token-lists'
+import { schema } from 'swifydex-token-lists'
 import Ajv from 'ajv'
 import addFormats from 'ajv-formats'
 import fetch from 'node-fetch'
@@ -84,7 +82,7 @@ npm package to take advantage of the JSON schema for validation and the TypeScri
 Otherwise, you are simply working with JSON. All the usual tools apply, e.g.:
 
 ```typescript
-import { TokenList, schema } from '@uniswap/token-lists'
+import { TokenList, schema } from 'swifydex-token-lists'
 
 // generate your token list however you like.
 const myList: TokenList = generateMyTokenList();
@@ -129,4 +127,3 @@ This is the preferred way of referencing your list.
 
 You can find a simple example of a token list in [test/schema/example.tokenlist.json](test/schema/example.tokenlist.json).
 
-A snapshot of the Uniswap default list encoded as a token list is found in [test/schema/bigexample.tokenlist.json](test/schema/bigexample.tokenlist.json).
